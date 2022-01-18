@@ -50,6 +50,9 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="box\Text.cs" />
+    <Compile Include="films.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>

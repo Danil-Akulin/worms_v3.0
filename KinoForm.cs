@@ -57,12 +57,12 @@ namespace MinuVorm
             img.Image = Image.FromFile(@"..\..\img\kinoshka2.jpg");
             this.Controls.Add(img);
             /////////////////////////////////////////////////////////////////////////////////////
-            //
+
         }
 
         private void but_Click(object sender, EventArgs e)
         {
-            Bilerid uus_aken = new Bilerid();
+            films uus_aken = new films();
             this.Hide();
             uus_aken.StartPosition = FormStartPosition.CenterScreen;
             uus_aken.ShowDialog();
