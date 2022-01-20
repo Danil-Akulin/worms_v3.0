@@ -7,7 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
 namespace MinuVorm
 {
 
@@ -22,9 +21,9 @@ namespace MinuVorm
 
 
         public KinoForm()
-        {
+        {           
+
             this.ClientSize = new System.Drawing.Size(1000, 600);
-            BackColor = Color.LightGray;
             this.Text = "Meil on hea meel teid näha!";
 
 
@@ -34,22 +33,20 @@ namespace MinuVorm
             box.Text = "Tere, Tere tulemast kinno \"Lootus\"";
             Font myfont = new Font("Times New Roman", 25.0f);        //изменения размера шрифта
             box.Font = myfont;                                    // хз
-
             box.ReadOnly = true;                                //только для чтения
             box.Height = 150;
             box.Width = 460;
-            box.BackColor = Color.LightGray;                //изменяет забний цвет на цвет страницы
-            box.BorderStyle = 0;                             // уберает чёрные рамки
+
 
             this.Controls.Add(box);
             but = new Button();
-            but.BackColor = Color.LightGray;
             but.Text = "Pileti ostmiseks";
             but.Size = new Size(120, 70);
-            but.ForeColor = Color.Black;
             but.Location = new Point(400, 375);
             but.Font = new Font("Times New Roman", 18);
             but.Click += new EventHandler(but_Click);
+            this.SetStyle(ControlStyles.SupportsTransparentBackColor, true);
+            but.BackColor = Color.Transparent;
             this.Controls.Add(but);
 
             //////////////////////////////////////////////////////////////////////////// 
@@ -59,6 +56,7 @@ namespace MinuVorm
             /////////////////////////////////////////////////////////////////////////////////////
 
         }
+
 
         private void but_Click(object sender, EventArgs e)
         {

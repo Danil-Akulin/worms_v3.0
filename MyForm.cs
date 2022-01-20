@@ -101,8 +101,12 @@ namespace MinuVorm
                 Name = string.Format("{1}{0}", k + 1, r + 1),
                 Dock = DockStyle.Fill,
                 BackColor = Color.Green
+
             };
             btn_tabel.Click += new EventHandler(Pileti_valik);
+
+            //btn_tabel.BackgroundImage = Image.FromFile(@"..\..\img\tool.jpg");                                      //не работает
+
             return btn_tabel;
         }
         public MyForm(int read, int kohad)
@@ -149,7 +153,6 @@ namespace MinuVorm
             }
             this.tlp.Dock = DockStyle.Fill;
             this.Controls.Add(tlp);
-
         }
 
         public void Saada_piletid(List<Pilet> piletid)
